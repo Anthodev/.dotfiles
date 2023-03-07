@@ -3,8 +3,8 @@ set -gx UID (id -u)
 set -gx GID (id -g)
 set -gx DOCKER_USER "(id -u):(id -g)"
 set -gx TERM "xterm-256color"
-set -gx LC_ALL "en_US.UTF-8"
-set -gx LANG "en_US.UTF-8"
+set -gx LC_ALL "fr_FR.UTF-8"
+set -gx LANG "fr_FR.UTF-8"
 
 if not pgrep -f ssh-agent > /dev/null
 	eval (ssh-agent -c)
@@ -25,7 +25,8 @@ alias gffs='git flow feature start'
 alias gfff='git flow feature finish'
 alias upd='sudo nala update'
 alias upg='sudo nala upgrade'
-alias inst='sudo nala install'
+alias inst='yay -S'
+alias rem='yay -Rns'
 alias nv='nvim'
 
 alias xl='exa -al --icons'
@@ -34,20 +35,13 @@ alias dcud='docker-compose up -d'
 alias dcs='docker-compose stop'
 alias dcd='docker-compose down'
 
-alias tekyn='cd ~/projects/tekyn/web-platform'
-alias ssh-tekyn='ssh tekynweb@51.91.247.113 -p 2311'
-
 alias t='tmux -2'
 alias ta='t attach -t'
 alias tn='t new -s'
-alias talw='ta tekyn_leg'
-alias tarw='ta -t tekyn_ref'
 
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
-# starship init fish | source
-
+### UNCOMMENT THIS PART TO ENABLE 1Password SSH-Agent ON WSL2
 # Created by `pipx` on 2022-12-05 18:19:07
-set PATH $PATH /home/anthodev/.local/bin
-
-source ~/.agent-bridge_fish.sh
+# set PATH $PATH /home/anthodev/.local/bin
+# source ~/.agent-bridge_fish.sh
