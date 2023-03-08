@@ -117,8 +117,8 @@
         "tooltip": false,
         "format-muted": " Muted",
         "on-click": "pamixer -t",
-        "on-scroll-up": "pamixer -i 5",
-        "on-scroll-down": "pamixer -d 5",
+        "on-scroll-up": "pw-volume change +2.5%; pkill -RTMIN+8 waybar",
+        "on-scroll-down": "pw-volume change -2.5%; pkill -RTMIN+8 waybar",
         "scroll-step": 5,
         "format-icons": {
             "headphone": "",
