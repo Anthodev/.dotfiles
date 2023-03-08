@@ -6,7 +6,7 @@ This repo is for stocking the configuration of several of the application i use 
 
 ## HyprLand rice
 My Linux desktop is running on the following setup:
-- **OS:** Manajaro (Sway Edition)
+- **OS:** Manjaro (Sway Edition)
 - **WM (Window Manager):** [HyprLand](https://github.com/hyprwm/Hyprland)
 - **Greeter:** sddm (with [sugar-candy](https://www.pling.com/p/1312658) theme)
 - **Shell:** [Fish Shell](https://github.com/fish-shell/fish-shell) (running with [Tide](https://github.com/IlanCosman/tide) theme)
