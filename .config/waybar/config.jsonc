@@ -116,7 +116,7 @@
         "format": "{icon} {volume}%",
         "tooltip": false,
         "format-muted": " Muted",
-        "on-click": "pamixer -t",
+        "on-click": "pavucontrol -t 3",
         "on-scroll-up": "pw-volume change +2.5%; pkill -RTMIN+8 waybar",
         "on-scroll-down": "pw-volume change -2.5%; pkill -RTMIN+8 waybar",
         "scroll-step": 5,
@@ -135,9 +135,9 @@
         "tooltip": false,
         "format-source": " {volume}%",
         "format-source-muted": " Muted",
-        "on-click": "pamixer --default-source -t",
-        "on-scroll-up": "pamixer --default-source -i 5",
-        "on-scroll-down": "pamixer --default-source -d 5",
+        "on-click": "pavucontrol -t 4",
+        "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+        "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
         "scroll-step": 5
     },
 }
