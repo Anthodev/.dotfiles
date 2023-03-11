@@ -25,7 +25,6 @@ Font used: [MonoLisa](https://monolisa.dev) (patched with Nerd Fonts)
 - waybar-hyprland
 - [rofi](https://github.com/davatorium/rofi) (with [Rofi themes](https://github.com/adi1090x/rofi))
 - thunar
-- [hyprpaper](https://github.com/hyprwm/hyprpaper)
 - pamac-manager
 - playerctl
 - pavucontrol
