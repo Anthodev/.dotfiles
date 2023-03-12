@@ -1,17 +1,12 @@
+---@type MappingsTable
 local M = {}
 
-M.disabled = {
+M.general = {
   n = {
-    ["gd"] = "",
-    ["gr"] = "",
+    [";"] = { ":", "enter command mode", opts = { nowait = true } },
   },
 }
 
-M.lspoveride = {
-  n = {
-    ["<leader>gd"] = { "<cmd>Telescope lsp_definitions<CR>", "definitions" },
-    ["<leader>gr"] = { "<cmd>Telescope lsp_references<CR>", "references" },
-  },
-}
+-- more keybinds!
 
 return M
