@@ -1,4 +1,6 @@
+@use "sass:list";
 @import "macchiato.css";
+// This file followed by catppuccin color scheme
 
 * {
   padding: 0;
@@ -8,13 +10,7 @@
 }
 
 window#waybar {
-  background: rgba(30, 30, 46, 0.6);
-}
-
-#window {
-    border-radius: 10px;
-    margin-left: 60px;
-    margin-right: 60px;
+  background: rgb(30, 30, 46, 0.6);
 }
 
 #custom-launcher {
@@ -27,23 +23,23 @@ window#waybar {
 #memory,
 #temperature {
   font-size: 14px;
-  background: #363a4f;
+  background: $Surface0;
   margin: 5px 0px 5px 0px;
 }
 
 #cpu {
-  color: #eed49f;
+  color: $Yellow;
   padding: 0px 10px 0px 12px;
   border-radius: 8px 0px 0px 8px;
 }
 
 #memory {
-  color: #a6da95;
+  color: $Green;
   padding: 0px 10px 0px 0px;
 }
 
 #temperature {
-  color: #8aadf4;
+  color: $Blue;
   padding: 0px 12px 0px 0px;
   border-radius: 0px 8px 8px 0px;
 }
@@ -55,62 +51,52 @@ window#waybar {
 #custom-wrap-right {
   font-size: 18px;
 }
-
 #custom-pacman-update {
-  color: #8bd5ca;
+  color: $Teal;
 }
 
-#workspaces {
-  font-size: 14px;
-  background: #363a4f;
-  padding: 0px 10px 0px 10px;
-  margin: 5px 0px 5px 0px;
-  border-radius: 8px 8px 8px 8px;
-}
-
-#workspaces button label {
-  color: #c6a0f6;
-  margin: 0px 8px;
+$workspaces-color: $Blue, $Mauve, $Green, $Mauve, $Rosewater, $Peach;
+@each $color in $workspaces-color {
+  $index: list.index($workspaces-color, $color);
+  #workspaces button:nth-child(#{$index}) label {
+    color: $color;
+    margin: 0px 8px;
+  }
 }
 
 #battery {
-  color: #a6da95;
+  color: $Green;
   margin: 0px 10px 0px 0px;
 }
 
 #pulseaudio,
 #backlight {
   font-size: 14px;
-  background: #363a4f;
+  background: $Surface0;
   margin: 5px 0px 5px 0px;
 }
 
 #backlight {
-  color: #eed49f;
+  color: $Yellow;
   padding: 0px 10px 0px 10px;
   border-radius: 8px 0px 0px 8px;
 }
 
 #pulseaudio {
-  color: #91d7e3;
+  color: $Sky;
   padding: 0px 10px 0px 0px;
   border-radius: 0px 8px 8px 0px;
 }
-
 #custom-right-arr {
-  color: #8aadf4;
+  color: $Blue;
 }
 
 #network {
-  color: #c6a0f6;
+  color: $Mauve;
 }
 
 #clock {
-  font-size: 14px;
-  background: #363a4f;
-  margin: 5px 0px 5px 0px;
-  padding: 0px 10px 0px 10px;
-  border-radius: 8px 8px 8px 8px;
+  margin: 0px 15px 0px 0px;
 }
 
 #custom-weather {
@@ -120,11 +106,8 @@ window#waybar {
 }
 
 #custom-dot {
-  color: #6e738d;
+  color: $Overlay0;
 }
-
 #custom-dot-alt {
-  color: #a5adcb;
+  color: $Subtext0;
 }
-
-/*# sourceMappingURL=style.css.map */

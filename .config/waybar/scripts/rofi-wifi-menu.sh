@@ -36,4 +36,3 @@ else
 		nmcli device wifi connect "$chosen_id" password "$wifi_password" | grep "successfully" && notify-send "Connection Established" "$success_message"
 	fi
 fi
-
