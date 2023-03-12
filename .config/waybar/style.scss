@@ -4,13 +4,17 @@
 
 * {
   padding: 0;
-  margin: 0;
+  // margin: 0;
   font-family: Iosevka;
   font-size: 16px;
 }
 
 window#waybar {
   background: rgb(30, 30, 46, 0.6);
+  margin: 7.5px, 15px, 0, 15px;
+  border-radius: 7.5px;
+  border: none;
+
 }
 
 #custom-launcher {

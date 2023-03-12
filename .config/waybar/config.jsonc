@@ -2,13 +2,11 @@
   "include": "~/.config/waybar/configs/custom_modules/modules",
   "layer": "top",
   "height": 40,
-  "margin-top": 0,
-  "margin-left": 0,
-  "margin-bottom": 0,
-  "margin-right": 0,
   "spacing": 0,
+  "margin": "7.5, 15, 0, 15",
+  "width": "90%",
+  "border-radius": 7.5,
   "exclusive": true,
-  "gtk-layer-shell": true,
 
   "modules-left": [
     "custom/launcher",
@@ -86,9 +84,8 @@
   },
   "backlight": {
     "device": "amdgpu_bl1",
-    "format": "{icon} {percent}%",
-    "tooltip": false,
-    "format-icons": ["", "", ""]
+    "format": " {percent}%",
+    "tooltip": false
   },
   "network": {
     "format-wifi": "  {signalStrength}%",
@@ -115,10 +112,14 @@
     "bat": "BAT1",
     "interval": 60,
     "states": {
+      "good": 85,
       "warning": 30,
       "critical": 15
     },
     "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
     "max-length": 25,
     "tooltip": false
@@ -139,7 +140,8 @@
     "exec": "hyprctl activewindow | grep class | awk '{print $2}'"
   },
   "hyprland/window": {
-    "format": "{}"
+    "format": "{}",
+    "max-length": 100
   },
   "custom/pacman-update": {
     "format": "  {} ",
