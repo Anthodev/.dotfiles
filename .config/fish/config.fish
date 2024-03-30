@@ -2,9 +2,7 @@ set -gx GPG_TTY (tty)
 set -gx UID (id -u)
 set -gx GID (id -g)
 set -gx DOCKER_USER "(id -u):(id -g)"
-set -gx TERM "xterm-256color"
-set -gx LC_ALL "fr_FR.UTF-8"
-set -gx LANG "fr_FR.UTF-8"
+set -gx TERM xterm-256color
 
 complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
