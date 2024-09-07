@@ -1,0 +1,10 @@
+@define-color background {{background}};
+@define-color background-alt {{color1}};
+@define-color foreground {{foreground}};
+@define-color selected {{color3}};
+@define-color active {{color9}};
+@define-color urgent #e77a7a;
+@define-color selected-active-background {{background}};
+@define-color selected-normal-background {{foreground}};
+@define-color selected-urgent-background {{background}};
+@define-color shade-shadow {{background}};

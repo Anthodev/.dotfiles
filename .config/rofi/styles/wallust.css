@@ -1,0 +1,10 @@
+@define-color background #000618;
+@define-color background-alt #8193A1;
+@define-color foreground #E6E7E8;
+@define-color selected #695C54;
+@define-color active #ADC4D7;
+@define-color urgent #e77a7a;
+@define-color selected-active-background #000618;
+@define-color selected-normal-background #E6E7E8;
+@define-color selected-urgent-background #000618;
+@define-color shade-shadow #000618;

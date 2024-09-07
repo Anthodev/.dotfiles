@@ -3,9 +3,9 @@ set -gx UID (id -u)
 set -gx GID (id -g)
 set -gx DOCKER_USER "(id -u):(id -g)"
 set -gx TERM xterm-256color
+set -gx BAT_THEME Catppuccin_Macchiato
 
 complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
-
 
 set -lx IS_WSL (eval uname -r)
 if string match -q -- '*WSL2' $IS_WSL
@@ -24,7 +24,9 @@ alias gfo='git fetch origin'
 alias upd='sudo paru'
 alias inst='paru -S'
 alias rem='paru -Rns'
+
 alias nv='nvim'
+alias cat='bat'
 
 alias xl='eza -al --icons'
 
@@ -37,3 +39,5 @@ alias ta='t attach -t'
 alias tn='t new -s'
 
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+
+fish_add_path -g ~/.local/bin

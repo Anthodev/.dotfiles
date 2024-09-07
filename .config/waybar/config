@@ -176,9 +176,9 @@
     "format": "{icon} {percent: >3}%",
     "format-icons": ["", ""],
     // "on-scroll-down": "brightnessctl -c backlight set 5%-",
-    "on-scroll-down": "light -A 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob",
+    "on-scroll-down": "brightnessctl -c backlight set 5%- && brightnessctl g | cut -d'.' -f1 > $SWAYSOCK.wob",
     // "on-scroll-up": "brightnessctl -c backlight set +5%"
-    "on-scroll-up": "light -U 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob"
+    "on-scroll-up": "brightnessctl -c backlight set +5% && brightnessctl g | cut -d'.' -f1 > $SWAYSOCK.wob"
   },
   "battery": {
     "states": {
@@ -230,7 +230,7 @@
   },
   "custom/power": {
     "format": "⏻",
-    "on-click": "nwgbar",
+    "on-click": "wlogout",
     "tooltip": false
   },
   // "custom/keyboard-layout": {
