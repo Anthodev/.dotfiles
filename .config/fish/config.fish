@@ -3,6 +3,7 @@ set -gx UID (id -u)
 set -gx GID (id -g)
 set -gx DOCKER_USER "(id -u):(id -g)"
 set -gx TERM xterm-256color
+set -gx LC_ALL C.UTF-8
 set -gx BAT_THEME Catppuccin_Macchiato
 
 complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
@@ -13,23 +14,27 @@ if string match -q -- '*WSL2' $IS_WSL
     alias ssh-add='ssh-add.exe'
 end
 
-alias gs='git status'
-alias ga='git add .'
-alias gtp='git pull --rebase'
 alias gpf='git push --force'
-alias gtc='git commit -S -m'
-alias gta='git add'
-alias gco='git checkout'
 alias gfo='git fetch origin'
+alias grd='git rebase develop'
+alias gr2='git rebase -i HEAD~2'
+alias grc='git rebase --continue'
+alias gtc='gitmoji -c'
+
 alias upd='sudo paru'
 alias inst='paru -S'
 alias rem='paru -Rns'
 
 alias nv='nvim'
 alias cat='bat'
+# alias zed="WAYLAND_DISPLAY='' zeditor "
 
 alias xl='eza -al --icons'
 
+alias task='go-task'
+alias j='just'
+
+# alias docker='podman'
 alias dcud='docker compose up -d'
 alias dcs='docker compose stop'
 alias dcd='docker compose down'
