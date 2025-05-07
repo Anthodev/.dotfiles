@@ -1,0 +1,11 @@
+.config/nvim/.neoconf.json
+.config/nvim/init.lua
+.config/nvim/lazy-lock.json
+.config/nvim/lua/config/lazy.lua
+.config/nvim/lua/plugins/example.lua
+.config/nvim/stylua.toml
+.config/nvim/.gitignore
+.config/nvim/LICENSE
+.config/nvim/README.md
+
+/.idea
